@@ -1,7 +1,6 @@
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -18,7 +17,7 @@ public class Main {
                 }
             }
         }
-        while (s.contains("()") || s.contains("[]") || s.contains("{}")) { //
+        while (s.contains("()") || s.contains("[]") || s.contains("{}")) {
             s = s.replaceAll("\\(\\)", "")
                     .replaceAll("\\[\\]", "")
                     .replaceAll("\\{\\}", "");
@@ -33,7 +32,7 @@ public class Main {
         if (a > 7) {
             System.out.println("Привет");
         }
-        else{
+        else {
             System.out.println("Введенное число меньше или равно 7");
         }
     }
@@ -43,7 +42,6 @@ public class Main {
         System.out.print("Введите имя> ");
         String name = new Scanner(System.in).nextLine();
         System.out.println((name.equals("Вячеслав") ? "Привет, " + name : "Нет такого имени"));
-
     }
 
     public static void task3() {
@@ -64,7 +62,6 @@ public class Main {
 
         String sequence = new Scanner(System.in).nextLine();
         System.out.println("Скобочная последовательность " + (isTrueSequence(sequence) ? "верна" : "не верна"));
-
     }
 
     public static void main(String[] args) {
@@ -80,7 +77,6 @@ public class Main {
         task4();
         System.out.println();
     }
-
 
     @DataProvider(name = "sequenceData")
     public Object[][] sequenceData() {
